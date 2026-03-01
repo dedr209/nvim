@@ -1,6 +1,7 @@
 return {
 	"akinsho/bufferline.nvim",
 	version = "*",
+	event = "BufReadPre",
 	dependencies = {
 		"moll/vim-bbye", -- Provides :Bdelete to close buffers without closing splits
 		"nvim-tree/nvim-web-devicons",

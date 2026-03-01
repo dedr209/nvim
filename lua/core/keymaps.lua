@@ -28,10 +28,6 @@ vim.keymap.set("v", "<C-S-d>", ":t '><CR>gv", { desc = "Duplicate selection down
 -- Toggle line wrapping
 vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", { desc = "Toggle: Line wrap" })
 
--- Yank to system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank: To clipboard" })
-vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank: Line to clipboard" })
-
 -- =============================================================================
 -- Movement & Centering
 -- =============================================================================
@@ -96,8 +92,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 -- Terminal Mode
 -- =============================================================================
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Terminal: Exit mode" })
-vim.keymap.set("n", "<leader>tt", "<cmd>split | terminal<CR>", { desc = "Terminal: Open split" })
-
+vim.keymap.set("n", "<leader>tn", "<cmd>enew | terminal<CR>i", { desc = "Terminal: New buffer" })
 -- =============================================================================
 -- Diagnostics
 -- =============================================================================

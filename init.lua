@@ -13,11 +13,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", {
-    change_detection = {
-        notify = false, -- Turn off notifications when you save config files
-    },
-    checker = {
-        enabled = true, -- Check for plugin updates automatically
-    }
+	change_detection = {
+		notify = false, -- Turn off notifications when you save config files
+	},
+	checker = {
+		enabled = true, -- Check for plugin updates automatically
+	},
 })
-
