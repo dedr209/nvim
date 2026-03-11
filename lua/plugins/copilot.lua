@@ -3,10 +3,39 @@ return {
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
 		event = "InsertEnter",
-		opts = {
-			suggestion = { enabled = true, auto_trigger = true },
-			panel = { enabled = true },
-		},
+		config = function()
+			require("copilot").setup({
+				suggestion = {
+					enabled = false,
+					auto_trigger = true,
+					debounce = 75,
+					keymap = {
+						accept = "<Tab>",
+						accept_word = "<C-Right>",
+						accept_line = "<C-l>",
+						next = "<M-]>",
+						prev = "<M-[>",
+						dismiss = "<C-]>",
+					},
+				},
+				panel = {
+					enabled = true,
+					auto_refresh = true,
+					keymap = {
+						jump_prev = "[[",
+						jump_next = "]]",
+						accept = "<CR>",
+						refresh = "gr",
+						open = "<M-CR>",
+					},
+				},
+				filetypes = {
+					markdown = true,
+					yaml = true,
+					["*"] = true, -- enable for all filetypes
+				},
+			})
+		end,
 	},
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
@@ -30,4 +59,3 @@ return {
 		},
 	},
 }
-

@@ -17,6 +17,6 @@ require("lazy").setup("plugins", {
 		notify = false, -- Turn off notifications when you save config files
 	},
 	checker = {
-		enabled = true, -- Check for plugin updates automatically
+		enabled = false, -- Check for plugin updates automatically
 	},
 })
